@@ -1,0 +1,29 @@
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #004225;        /* British Racing Green */
+  --md-primary-fg-color--light: #004225; /* British Racing Green */
+  --md-primary-fg-color--dark: #004225;  /* British Racing Green */
+  --md-accent-fg-color: #004225;         /* British Racing Green */
+  --md-accent-fg-color--transparent: rgba(0, 66, 37, 0.1); /* Transparent British Racing Green */
+}
+
+/* Apply British Racing Green to specific elements */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:focus,
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--md-accent-fg-color--light);
+}
