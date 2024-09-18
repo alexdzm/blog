@@ -46,6 +46,7 @@ markdown_extensions:
   - admonition
   - footnotes
   - meta
+  - admonition #for warning boxes
 
 plugins:
   - search
@@ -56,3 +57,5 @@ extra:
       link: https://github.com/alexdzm
     - icon: fontawesome/brands/twitter
       link: https://x.com/alexdzm
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alexdzm/
