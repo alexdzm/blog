@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../../">
       
-        <link rel="next" href="blog/">
+      
+        <link rel="next" href="../mechanistic-interpretability/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>alexdzm</title>
+        <title>LLMs - alexdzm</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hey" class="md-skip">
+        <a href="#llms" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="alexdzm" class="md-header__button md-logo" aria-label="alexdzm" data-md-component="logo">
+    <a href="../../.." title="alexdzm" class="md-header__button md-logo" aria-label="alexdzm" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 22a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm-1-3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57l-2.29-3.96L14 17l-5.07-5.07-3.75 6.5c-.11.16-.18.36-.18.57m8-9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              LLMs
             
           </span>
         </div>
@@ -203,11 +205,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -222,11 +222,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   Blog
@@ -248,9 +250,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -261,7 +261,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="alexdzm" class="md-nav__button md-logo" aria-label="alexdzm" data-md-component="logo">
+    <a href="../../.." title="alexdzm" class="md-nav__button md-logo" aria-label="alexdzm" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 22a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm-1-3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57l-2.29-3.96L14 17l-5.07-5.07-3.75 6.5c-.11.16-.18.36-.18.57m8-9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg>
@@ -276,19 +276,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -297,7 +288,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -306,23 +296,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -333,7 +328,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -349,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -367,6 +362,8 @@
                 
   
   
+    
+  
   
   
     
@@ -376,11 +373,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -394,7 +391,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Categories
@@ -405,12 +402,34 @@
                 
   
   
-  
     
   
   
-    <li class="md-nav__item">
-      <a href="blog/category/llms/" class="md-nav__link">
+    
+      
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LLMs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -419,6 +438,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#llms-on-the-straight-narrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs on the Straight &amp; Narrow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -433,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/category/mechanistic-interpretability/" class="md-nav__link">
+      <a href="../mechanistic-interpretability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,9 +518,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -484,6 +530,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#llms-on-the-straight-narrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs on the Straight &amp; Narrow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -491,48 +554,94 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-<h1 id="hey">Hey!</h1>
-<p>I'm a machine learning engineer finding new applications for research that I am interested in. I am constantly in awe of the physical and digital engineering feats I come across and I want to be part of creating them. So far I have spend time working on (decreasing order of experience):</p>
-<ul>
-<li>Quantum Machine Learning, Information, Optics, Error correction.</li>
-<li>Generative image models, specifically image-to-image GANs.</li>
-<li>Retrieval augmented generation (RAG) systems for Language Models.</li>
-<li>Topic Modelling.</li>
-</ul>
-<p>I hope to spend more time working on:</p>
-<ul>
-<li>Mechanistic Interpretability of ML models.</li>
-<li>Decoding problems in Quantum Error Correction.</li>
-<li>Graph neural networks.</li>
-<li>Designing benchmarks for frontier LLMs.</li>
-</ul>
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-  
-
-
-
-                
-              </article>
-            </div>
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="llms">LLMs</h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-03-15 00:00:00">March 15, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../mechanistic-interpretability/" class="md-meta__link">Mechanistic Interpretability</a>, 
+              <a href="./" class="md-meta__link">LLMs</a></li>
+        
+        
           
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="llms-on-the-straight-narrow"><a class="toclink" href="../../straight-and-narrow/">LLMs on the Straight &amp; Narrow</a></h2>
+<p>Like a lot of AI engineers, I have a background in designing and training my own ML models but most of my days are now spent calling an API or running pretrained models. The differences between the models I used to work with and the behemoths of state of the art modern LLMs don't stop at their capabilities or how the average engineer uses them, the way we understand how they work (a field known as <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">mechanistic interpretability</a>) is entirely different. In this post I share my initial investigations into this world, by making good models go bad.</p>
+<h3 id="jailbreaking-llms"><a class="toclink" href="../../straight-and-narrow/#jailbreaking-llms">Jailbreaking LLMs</a></h3>
+<p>Llama 3 had just come out and I came across <a href="https://arxiv.org/pdf/2407.01376v1">this work</a> that shows three effective methods of boosting the likelihood of LLMs returning harmful responses while maintaining good performance on standard LLM benchmarks. The first two leverage well known parameter efficient finetuning techniques (QLoRA &amp; QLoReFT) to unlearn what the model was taught in fine tuning. In both cases fewer than 20k QA pairs and a single GPU are all that was needed to get the model to tell you how to push your grandmother down the stairs and make it seem like an accident. But much more impressive is the third technique, <em>refusal orthogonalization</em>, which requires no fine tuning at all.</p>
+<h3 id="refusal-orthogonalization"><a class="toclink" href="../../straight-and-narrow/#refusal-orthogonalization">Refusal orthogonalization</a></h3>
+<p><a href="https://arxiv.org/abs/2406.11717">Refusal orthogonalization</a> (RO), supposes that the ability of a model to refuse to answer a prompt on safety grounds is mediated by a single direction. With the help of their very slick repo and some surprisingly small datasets of harmful + harmless prompts one can find this direction for many families of models available on hugging face. And with ease one can run a version of a model where this direction is suppressed, the model will do anything. The process of interfering with a model like this to change its behaviors is called model steering.</p>
+<p><center>
+<img alt="" src="../../../static/steering_eg1.png" />
+<img alt="" src="../../../static/steering_eg2.png" /></p>
+<p><em>Fig 1: Examples of model steering from the refusal orthogonalization paper</em></p>
+<p></center></p>
+<p>This repo works by taking the mean activations of the model for the harmless and the harmful prompts in the residual stream at every transformer block. These activations are then subtracted from each other, to find the direction that along which they differ. Different directions are selected at each block and each token position after the input.</p>
+<p><center></p>
+<div class="arithmatex">\[\mu_i^{(l)} = \frac{1}{|\mathcal{D}_\text{harmful}^{(\text{train})}|} \sum_{t \in \mathcal{D}_\text{harmful}^{(\text{train})}} x_i^{(l)}(t), \quad \nu_i^{(l)} = \frac{1}{|\mathcal{D}_\text{harmless}^{(\text{train})}|} \sum_{t \in \mathcal{D}_\text{harmless}^{(\text{train})}} x_i^{(l)}(t).\]</div>
+<p><em>Eq 1: The definition of the mean harmful and harmless activations used to calculate the refusal direction. Where <span class="arithmatex">\(i\)</span> is a token index, <span class="arithmatex">\(l\)</span> is a layer index and <span class="arithmatex">\(t\)</span> is a prompt. Also taken from the RO paper</em>
+</center></p>
+<p>After this, each direction is subtracted in turn from a model with a harmful prompt and the direction that is most effective at suppressing refusal is selected as the refusal direction.</p>
+<h3 id="llama-32-ro"><a class="toclink" href="../../straight-and-narrow/#llama-32-ro">Llama 3.2 RO</a></h3>
+<p>I set about applying this technique to the latest model, released since the paper was announced, <a href="https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct">llama 3.2 1B Instruct</a>. I obtained results on a par with the earlier models, shown as the first two sets of results in Fig 2. </p>
+<p>So this attack is roughly as effective on this new, small, model as it was on its larger slightly older counterparts. This is hardly surprising, this attack vector is not mentioned in the latest llama training paper as something the team were hoping to address.</p>
+<p>Note I ran this experiment with Llama guard 2 (as in the original paper) and with the newer Llama guard 3, the results were almost exactly the same. However, I have only included Llama guard 2 results in this post for consistency. </p>
+<h3 id="mlps-do-all-the-work"><a class="toclink" href="../../straight-and-narrow/#mlps-do-all-the-work">MLPs do all the work</a></h3>
+<p>In the RO paper, the authors decide that once a direction is selected in a given layer and position, it should then be ablated in many different places. It is subtracted from the activations at <em>every</em> layer, before the transformer block and after the attention heads and MLP. I had been hoping that this approach was a step towards a better understanding of <em>how</em> refusal works, but the need to intervene in so many places dashed that. To understand the mechanism better, I experimented with only ablating the refusal direction in a subset of these locations,though still at every layer of the model.
+<center></p>
+<p><img alt="Comparison of ablation strategies" src="../../../static/llama_intervention_plot.png" />
+<em>Fig 2: Comparison of the refusal and safety scores for llama 3.2 when using different ablation techniques. Full intervention is the combination of the following 3. The intervention locations are shown in Fig 3.</em>
+</center></p>
+<p>These results show that, in the case of Llama 3.2-1B-Instruct, only ablating this direction in the residual stream is sufficient to recover the steering behavior that all three interventions produce together. This is hardly surprising as the diagram below shows that this single operation is the only one that writes to the residual stream with no skips going around it, in both other cases there remains some contribution to this direction that is able to circumvent being ablated.
+<center></p>
+<p><img alt="Llama diagram" src="../../../static/llama_diagram.png" /></p>
+<p><em>Fig 3: The locations of the different model interventions. 1) Residual Only 2) Attention Only 3) MLP only. Diagram adapted from <a href="https://llama-2.ai/llama-2-explained/">llama-2.ai</a></em></p>
+<p></center>
+This result is not particularly useful for those that want the best refusal suppression, the original technique of ablating everywhere still works and is not computationally expensive at all. On top of this the authors also propose a weight orthogonalization technique which is equivalent and allows for this all to have zero extra cost at inference time over running the model normally.</p>
+<p>However this result does suggest an interesting point for those interested in understanding refusal. In this model the attention mechanism does almost nothing to induce refusal (by the mechanism we are suppressing). This suggests  the entire refusal mechanism is contained in the MLP.</p>
+<p>I hope to investigate this phenomenon further in other models and by varying how many blocks in the model I intervene on. I am intrigued to see if this can be linked with <a href="https://arxiv.org/abs/2406.15786">this recent work</a> which found that a lot of attention layers can be removed from a trained model without degrading performance.</p>
+<h4 id="what-next"><a class="toclink" href="../../straight-and-narrow/#what-next">What next?</a></h4>
+<p>RO is a relatively simple interpretability experiment for LLMs. I am now spending time investigating sparse auto encoders (SAEs) with a particular focus on the <a href="https://ai.google.dev/gemma/docs/gemma_scope">Gemma Scope</a> models that have been publicly released. I am curious to find out if these complex features can be steered in the same way as refusal can.</p>
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -606,16 +715,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
       
-        <script src="javascripts/custom.js"></script>
+        <script src="../../../javascripts/custom.js"></script>
       
     
   </body>
