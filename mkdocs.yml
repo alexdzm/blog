@@ -36,6 +36,12 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js
+  - javascripts/custom.js
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -43,13 +49,28 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+        generic: true
   - admonition
   - footnotes
   - meta
   - admonition #for warning boxes
+  
 
 plugins:
   - search
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_url_format: "{slug}"
+      archive: false
+      categories: true
+      pagination: true
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
 
 extra:
   social:
