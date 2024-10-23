@@ -1,6 +1,6 @@
 ---
 title: LLMs on the Straight & Narrow
-date: 2024-03-15
+date: 2024-10-20
 author:
   - alexdzm
 categories:
