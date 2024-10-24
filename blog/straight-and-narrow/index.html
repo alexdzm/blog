@@ -527,9 +527,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-next" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      What next?
+      Next Steps...
     </span>
   </a>
   
@@ -577,7 +577,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-10-20 00:00:00" class="md-ellipsis">October 20, 2024</time>
+                        <time datetime="2024-10-24 00:00:00" class="md-ellipsis">October 24, 2024</time>
                       </div>
                     </li>
                     
@@ -600,7 +600,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              5 min read
+                              6 min read
                             
                           </span>
                         </div>
@@ -623,7 +623,7 @@
 <h1 id="llms-on-the-straight-narrow">LLMs on the Straight &amp; Narrow</h1>
 <p>Like a lot of AI engineers, I have a background in designing and training my own ML models but most of my days are now spent calling an API or running pretrained models. The differences between the models I used to work with and the behemoths of state of the art modern LLMs don't stop at their capabilities or how the average engineer uses them, the way we understand how they work (a field known as <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">mechanistic interpretability</a>) is entirely different. In this post I share my initial investigations into this world, by making good models go bad.</p>
 <h2 id="jailbreaking-llms">Jailbreaking LLMs</h2>
-<p>Llama 3 had just come out and I came across <a href="https://arxiv.org/pdf/2407.01376v1">this work</a> that shows three effective methods of boosting the likelihood of LLMs returning harmful responses while maintaining good performance on standard LLM benchmarks. The first two leverage well known parameter efficient finetuning techniques (QLoRA &amp; QLoReFT) to unlearn what the model was taught in fine tuning. In both cases fewer than 20k QA pairs and a single GPU are all that was needed to get the model to tell you how to push your grandmother down the stairs and make it seem like an accident. But much more impressive is the third technique, <em>refusal orthogonalization</em>, which requires no fine tuning at all.</p>
+<p>Llama 3 had just come out and I came across <a href="https://arxiv.org/pdf/2407.01376v1">this work</a> that shows three effective methods of boosting the likelihood of LLMs returning harmful responses while maintaining good performance on standard LLM benchmarks. The first two leverage well known parameter efficient finetuning techniques (QLoRA &amp; QLoReFT) to continue model post-training allowing the model to respond to harmful prompts. In both cases fewer than 20k QA pairs and a single GPU are all that was needed to get the model to tell you how to push your grandmother down the stairs and make it seem like an accident. But much more impressive is the third technique, <em>refusal orthogonalization</em>, which requires no fine tuning at all.</p>
 <h2 id="refusal-orthogonalization">Refusal orthogonalization</h2>
 <p><a href="https://arxiv.org/abs/2406.11717">Refusal orthogonalization</a> (RO), supposes that the ability of a model to refuse to answer a prompt on safety grounds is mediated by a single direction. With the help of their very slick repo and some surprisingly small datasets of harmful + harmless prompts one can find this direction for many families of models available on hugging face. And with ease one can run a version of a model where this direction is suppressed, the model will do anything. The process of interfering with a model like this to change its behaviors is called model steering.</p>
 <p><center>
@@ -653,10 +653,16 @@
 <p><em>Fig 3: The locations of the different model interventions. 1) Residual Only 2) Attention Only 3) MLP only. Diagram adapted from <a href="https://llama-2.ai/llama-2-explained/">llama-2.ai</a></em></p>
 <p></center>
 This result is not particularly useful for those that want the best refusal suppression, the original technique of ablating everywhere still works and is not computationally expensive at all. On top of this the authors also propose a weight orthogonalization technique which is equivalent and allows for this all to have zero extra cost at inference time over running the model normally.</p>
-<p>However this result does suggest an interesting point for those interested in understanding refusal. In this model the attention mechanism does almost nothing to induce refusal (by the mechanism we are suppressing). This suggests  the entire refusal mechanism is contained in the MLP.</p>
+<p>However this result does suggest an interesting point about the mechanism by which Llama 3.2 refuses to respond to harmful prompts. In this model the attention mechanism does almost nothing to induce refusal (by the mechanism we are suppressing). This suggests  the entire refusal mechanism is contained in the MLP.</p>
 <p>I hope to investigate this phenomenon further in other models and by varying how many blocks in the model I intervene on. I am intrigued to see if this can be linked with <a href="https://arxiv.org/abs/2406.15786">this recent work</a> which found that a lot of attention layers can be removed from a trained model without degrading performance.</p>
-<h3 id="what-next">What next?</h3>
-<p>RO is a relatively simple interpretability experiment for LLMs. I am now spending time investigating sparse auto encoders (SAEs) with a particular focus on the <a href="https://ai.google.dev/gemma/docs/gemma_scope">Gemma Scope</a> models that have been publicly released. I am curious to find out if these complex features can be steered in the same way as refusal can.</p>
+<h3 id="next-steps">Next Steps...</h3>
+<p>RO is a relatively simple interpretability experiment to run for LLMs. I am now spending time investigating sparse auto encoders (SAEs). These models are trained to define and identify monosemantic features of LLMs. In particular I am focussing on the <a href="https://ai.google.dev/gemma/docs/gemma_scope">Gemma Scope</a> family of models, trained on Google's Gemini models. They have been trained on different parts of the residual stream with varying hyper parameters. One finding of particular  relevance to this post is that the lowest delta loss (increase in loss of the LLM when the output of the SAE is used in the residual stream) of these SAEs is present in ones trained in a position is most similar to  1) in Fig 3. These results are shown in Fig 4. </p>
+<p><center></p>
+<p><img alt="Llama diagram" src="../../static/gemma_scope_plot.png" /></p>
+<p><em>Fig 4: Delta Loss for a SAEs of varying width and sparsity (L0) from <a href="https://arxiv.org/pdf/2408.05147">the Gemma Scope Paper</a>. The third column shows models trained at a similar part of the residual stream to position 1) in this blog. These SAEs achieve relatively high loss values.</em></p>
+<p></center></p>
+<p>The comparatively strong performance of the SAEs at positions more like 2) &amp; 3) could be explained by the fact that those models are being evaluated at the same location they were trained on. In this RO work, the directions are all selected from 1) before being ablated at all three. I intend to investigate if this difference alone describes the difference in performance I found in Fig 2.</p>
+<p><em>Thank you to <a href="https://x.com/HarryCoppock">@HarryCoppock</a> for feedback on this post</em></p>
 
 
 
