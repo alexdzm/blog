@@ -72,6 +72,18 @@ However this result does suggest an interesting point about the mechanism by whi
 
 I hope to investigate this phenomenon further in other models and by varying how many blocks in the model I intervene on. I am intrigued to see if this can be linked with [this recent work](https://arxiv.org/abs/2406.15786) which found that a lot of attention layers can be removed from a trained model without degrading performance.
 
-### What next?
+### Next Steps...
 
-RO is a relatively simple interpretability experiment for LLMs. I am now spending time investigating sparse auto encoders (SAEs) with a particular focus on the [Gemma Scope](https://ai.google.dev/gemma/docs/gemma_scope) models that have been publicly released. I am curious to find out if these complex features can be steered in the same way as refusal can.
+RO is a relatively simple interpretability experiment to run for LLMs. I am now spending time investigating sparse auto encoders (SAEs). These models are trained to define and identify monosemantic features of LLMs. In particular I am focussing on the [Gemma Scope](https://ai.google.dev/gemma/docs/gemma_scope) family of models, trained on Google's Gemini models. They have been trained on different parts of the residual stream with varying hyper parameters. One finding of particular  relevance to this post is that the lowest delta loss (increase in loss of the LLM when the output of the SAE is used in the residual stream) of these SAEs is present in ones trained in a position is most similar to  1) in Fig 3. These results are shown in Fig 4. 
+
+<center>
+
+![Llama diagram](../../static/gemma_scope_plot.png)
+
+*Fig 4: Delta Loss for a SAEs of varying width and sparsity (L0) from [the Gemma Scope Paper](https://arxiv.org/pdf/2408.05147). The third column shows models trained at a similar part of the residual stream to position 1) in this blog. These SAEs achieve relatively high loss values.*
+
+</center>
+
+The comparatively strong performance of the SAEs at positions more like 2) & 3) could be explained by the fact that those models are being evaluated at the same location they were trained on. In this RO work, the directions are all selected from 1) before being ablated at all three. I intend to investigate if this difference alone describes the difference in performance I found in Fig 2.
+
+*Thank you to [@HarryCoppock](https://x.com/HarryCoppock) for feedback on this post*
