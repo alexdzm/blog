@@ -33,6 +33,7 @@ theme:
     - content.code.copy
   icon:
     logo: material/flask
+  favicon: '🧪'
 
 extra_css:
   - stylesheets/extra.css
