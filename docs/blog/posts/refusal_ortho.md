@@ -15,7 +15,7 @@ Like a lot of AI engineers, I have a background in designing and training my own
 
 ## Jailbreaking LLMs
 
-Llama 3 had just come out and I came across [this work](https://arxiv.org/pdf/2407.01376v1) that shows three effective methods of boosting the likelihood of LLMs returning harmful responses while maintaining good performance on standard LLM benchmarks. The first two leverage well known parameter efficient finetuning techniques (QLoRA & QLoReFT) to unlearn what the model was taught in fine tuning. In both cases fewer than 20k QA pairs and a single GPU are all that was needed to get the model to tell you how to push your grandmother down the stairs and make it seem like an accident. But much more impressive is the third technique, *refusal orthogonalization*, which requires no fine tuning at all.
+Llama 3 had just come out and I came across [this work](https://arxiv.org/pdf/2407.01376v1) that shows three effective methods of boosting the likelihood of LLMs returning harmful responses while maintaining good performance on standard LLM benchmarks. The first two leverage well known parameter efficient finetuning techniques (QLoRA & QLoReFT) to continue model post-training allowing the model to respond to harmful prompts. In both cases fewer than 20k QA pairs and a single GPU are all that was needed to get the model to tell you how to push your grandmother down the stairs and make it seem like an accident. But much more impressive is the third technique, *refusal orthogonalization*, which requires no fine tuning at all.
  
 ## Refusal orthogonalization 
 
@@ -68,7 +68,7 @@ These results show that, in the case of Llama 3.2-1B-Instruct, only ablating thi
 </center>
 This result is not particularly useful for those that want the best refusal suppression, the original technique of ablating everywhere still works and is not computationally expensive at all. On top of this the authors also propose a weight orthogonalization technique which is equivalent and allows for this all to have zero extra cost at inference time over running the model normally.
 
-However this result does suggest an interesting point for those interested in understanding refusal. In this model the attention mechanism does almost nothing to induce refusal (by the mechanism we are suppressing). This suggests  the entire refusal mechanism is contained in the MLP.
+However this result does suggest an interesting point about the mechanism by which Llama 3.2 refuses to respond to harmful prompts. In this model the attention mechanism does almost nothing to induce refusal (by the mechanism we are suppressing). This suggests  the entire refusal mechanism is contained in the MLP.
 
 I hope to investigate this phenomenon further in other models and by varying how many blocks in the model I intervene on. I am intrigued to see if this can be linked with [this recent work](https://arxiv.org/abs/2406.15786) which found that a lot of attention layers can be removed from a trained model without degrading performance.
 
