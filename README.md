@@ -36,7 +36,7 @@
 ## Adding Content
 
 1. Add new pages to `docs/`
-2. Add blog posts to `docs/blog/`
+2. Add blog posts to `docs/posts/`
 3. Update `mkdocs.yml` as needed
 
 For more details, refer to the [MkDocs documentation](https://www.mkdocs.org/).
