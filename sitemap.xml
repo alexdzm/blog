@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://alexdzm.github.io/blog/</loc>
+         <lastmod>2024-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://alexdzm.github.io/blog/blog/</loc>
+         <lastmod>2024-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://alexdzm.github.io/blog/posts/</loc>
+         <lastmod>2024-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://alexdzm.github.io/blog/posts/straight-and-narrow/</loc>
+         <lastmod>2024-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://alexdzm.github.io/blog/posts/category/mechanistic-interpretability/</loc>
+         <lastmod>2024-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://alexdzm.github.io/blog/posts/category/llms/</loc>
+         <lastmod>2024-11-01</lastmod>
+    </url>
 </urlset>
