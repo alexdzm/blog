@@ -1,4 +1,7 @@
 site_name: alexdzm
+site_description: "Alex's blog focussing on machine learning, AI, quantum computing. Including his work experience in science and engineering."
+site_author: "Alexander Zelenka Martin"
+site_url: "https://alexdzm.github.io/blog/"
 
 theme:
   name: material
@@ -61,7 +64,7 @@ markdown_extensions:
 plugins:
   - search
   - blog:
-      blog_dir: blog
+      blog_dir: posts
       blog_toc: true
       post_url_format: "{slug}"
       archive: false
@@ -71,7 +74,7 @@ plugins:
 nav:
   - Home: index.md
   - Blog:
-    - blog/index.md
+    - posts/index.md
 
 extra:
   social:
@@ -81,3 +84,6 @@ extra:
       link: https://x.com/alexdzm
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/alexdzm/
+  analytics:
+    provider: google
+    property: G-465021017
